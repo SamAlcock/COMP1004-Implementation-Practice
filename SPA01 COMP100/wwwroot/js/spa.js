@@ -19,12 +19,27 @@ $(document).ready(function () {
     })
 });
 $(document).ready(function () {
-    $('#further-info').click(function () {
+    $('#further').click(function () {
         $('#page-content-wrapper').load('further-info.html');
     })
 });
-function store() { //stores items in the localStorage
-    var VenueCustomer = document.getElementById('InputVenueCustomer').value;
+$(document).ready(function () {
+    $('#further_image').click(function () {
+        $('#page-content-wrapper').load('further-info.html');
+    })
+});
+$(document).ready(function () {
+    $('#customer_image').click(function () {
+        $('#page-content-wrapper').load('customer.html');
+    })
+});
+$(document).ready(function () {
+    $('#venue_image').click(function () {
+        $('#page-content-wrapper').load('venue.html');
+    })
+});
+function store_customer_form() { //stores items in the localStorage
+    var InputVenueCustomer = document.getElementById('InputVenueCustomer').value;
     var InputDiner = document.getElementById('InputDiner').value;
     var TimeAttending = document.getElementById('TimeAttending').value;
     var key = document.getElementById('key').value; //gets the key from the user
@@ -38,3 +53,27 @@ function store() { //stores items in the localStorage
     window.localStorage.setItem(key, JSON.stringify(customer));
     //converting object to string
 }
+function store_venue_form() { //stores items in the localStorage
+    var InputVenue = document.getElementById('InputVenue').value;
+    var InputTables = document.getElementById('InputTables').value;
+    var InputSeats = document.getElementById('InputSeats').value;
+    var OpeningTime = document.getElementById('OpeningTime').value;
+    var ClosingTime = document.getElementById('ClosingTime').value;
+    var key = document.getElementById('key').value; //gets the key from the user
+
+    const customer = {
+        InputVenue: InputVenue,
+        InputTables: InputTables,
+        InputSeats: InputSeats,
+        OpeningTime: OpeningTime,
+        ClosingTime: ClosingTime,
+    }
+
+    window.localStorage.setItem(key, JSON.stringify(customer));
+    //converting object to string
+}
+$(document).ready(function () {
+    $('#customer-submit').click(function () {
+        store()
+    })
+});
