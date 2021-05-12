@@ -1,7 +1,7 @@
 ﻿<div class="customer-page">
     <h1><b>Customer Details</b></h1>
 </div>
-<form>
+<form name="customer_form" action="form.php" method="get" id="form">
     <div class="mb-3">
         <label for="InputCustomerName" class="form-label">Name</label>
         <input type="text" class="form-control" id="InputVenueCustomer">
@@ -22,5 +22,5 @@
         <label for="TimeAttending" class="form-label">Time Attending</label>
         <input type="time" class="form-control" id="TimeAttending">
     </div>
-    <button type="submit" class="btn btn-primary" id="customer-submit" onclick="store_customer_form()">Submit</button>
+    <button type="submit" class="btn btn-primary" id="customer-submit">Submit</button>
 </form>
