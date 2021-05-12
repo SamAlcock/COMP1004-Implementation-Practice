@@ -3,19 +3,24 @@
 </div>
 <form>
     <div class="mb-3">
+        <label for="InputCustomerName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="InputVenueCustomer">
+    </div>
+    <div class="mb-3">
+        <label for="InputCustomerPhoneNumber" class="form-label">Phone Number</label>
+        <input type="number" class="form-control" id="InputVenueCustomer">
+    </div>
+    <div class="mb-3">
         <label for="InputVenueCustomer" class="form-label">Venue Name</label>
         <input type="text" class="form-control" id="InputVenueCustomer">
     </div>
     <div class="mb-3">
         <label for="Diners" class="form-label">Number of seats</label>
-        <input type="number" class="form-control" id="InputDiners">
+        <input type="number" min="1" max="6" class="form-control" id="InputDiners">
     </div>
     <div class="mb-3">
         <label for="TimeAttending" class="form-label">Time Attending</label>
         <input type="time" class="form-control" id="TimeAttending">
     </div>
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck2">
-    </div>
-    <button type="submit" class="btn btn-primary" id="customer-submit">Submit</button>
+    <button type="submit" class="btn btn-primary" id="customer-submit" onclick="store_customer_form()">Submit</button>
 </form>

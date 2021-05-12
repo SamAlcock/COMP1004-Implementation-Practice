@@ -39,20 +39,20 @@ $(document).ready(function () {
     })
 });
 function store_customer_form() { //stores items in the localStorage
-    var InputVenueCustomer = document.getElementById('InputVenueCustomer').value;
-    var InputDiner = document.getElementById('InputDiner').value;
+    var CustomersVenue = document.getElementById('InputVenueCustomer').value;
+    var Customers = document.getElementById('InputDiner').value;
     var TimeAttending = document.getElementById('TimeAttending').value;
-    var key = document.getElementById('key').value; //gets the key from the user
+    //var key = document.getElementById('key').value; //gets the key from the user
+    var key = 'key';
+    localStorage.setItem(key, InputDiner)
+    localStorage.setItem(key, CustomersVenue)
+    localStorage.setItem(key, Customers)
+    localStorage.setItem(key, TimeAttending)
 
-    const customer = {
-        VenueCustomer: VenueCustomer,
-        InputDiner: InputDiner,
-        TimeAttending: TimeAttending,
-    }
-
-    window.localStorage.setItem(key, JSON.stringify(customer));
+    //window.localStorage.setItem(key, JSON.stringify(customer));
     //converting object to string
 }
+
 function store_venue_form() { //stores items in the localStorage
     var InputVenue = document.getElementById('InputVenue').value;
     var InputTables = document.getElementById('InputTables').value;
@@ -60,6 +60,8 @@ function store_venue_form() { //stores items in the localStorage
     var OpeningTime = document.getElementById('OpeningTime').value;
     var ClosingTime = document.getElementById('ClosingTime').value;
     var key = document.getElementById('key').value; //gets the key from the user
+
+    
 
     const customer = {
         InputVenue: InputVenue,
@@ -72,8 +74,19 @@ function store_venue_form() { //stores items in the localStorage
     window.localStorage.setItem(key, JSON.stringify(customer));
     //converting object to string
 }
+
+
+
 $(document).ready(function () {
     $('#customer-submit').click(function () {
-        store()
+        var CustomersVenue = document.getElementById('InputVenueCustomer').value;
+        var Customers = document.getElementById('InputDiner').value;
+        var TimeAttending = document.getElementById('TimeAttending').value;
+        //var key = document.getElementById('key').value; //gets the key from the user
+        var key = 'key';
+        localStorage.setItem(key, CustomersVenue)
+        localStorage.setItem(key, Customers)
+        localStorage.setItem(key, TimeAttending)
+
     })
 });
