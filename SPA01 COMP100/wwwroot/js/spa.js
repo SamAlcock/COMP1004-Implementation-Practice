@@ -10,7 +10,7 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
     $('#venue').click(function () {
-        $('#page-content-wrapper').load('venue.html');
+        $('#page-content-wrapper').load('login.html');
     })
 });
 $(document).ready(function () {
@@ -35,6 +35,11 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
     $('#venue_image').click(function () {
+        $('#page-content-wrapper').load('venue.html');
+    })
+});
+$(document).ready(function () {
+    $('#login-submit').click(function () {
         $('#page-content-wrapper').load('venue.html');
     })
 });
