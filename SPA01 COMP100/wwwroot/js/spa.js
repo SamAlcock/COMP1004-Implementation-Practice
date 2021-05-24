@@ -1,6 +1,14 @@
 ﻿$(document).ready(function () {
+    $().load('navbar.html');
+});
+$(document).ready(function () {
     $('#map').click(function () {
         $('#page-content-wrapper').load('map.html');
+    })
+});
+$(document).ready(function () {
+    $('#track-and-trace').click(function () {
+        $('#page-content-wrapper').load('track-and-trace.html');
     })
 });
 $(document).ready(function () {
@@ -35,12 +43,18 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
     $('#venue_image').click(function () {
-        $('#page-content-wrapper').load('venue.html');
+        $('#page-content-wrapper').load('login.html');
     })
 });
 $(document).ready(function () {
-    $('#login-submit').click(function () {
-        $('#page-content-wrapper').load('venue.html');
+    $(document).on("click", "#login-submit", function () {
+        //$('#page-content-wrapper').load('venue.html');
+        validate();
+    })
+});
+$(document).ready(function () {
+    $('#yes').click(function () {
+        $('#page-content-wrapper').load('isolate.html');
     })
 });
 function store_customer_form() { //stores items in the localStorage
@@ -80,7 +94,11 @@ function store_venue_form() { //stores items in the localStorage
     //converting object to string
 }
 
-
+function validate() {
+    if (document.getElementById("username").value == "user" && document.getElementById("password").value == "password") {
+        $('#page-content-wrapper').load('venue.html');
+    }
+}
 
 $(document).ready(function () {
     $('#customer-submit').click(function () {
