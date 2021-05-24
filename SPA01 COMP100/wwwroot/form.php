@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿﻿<?php
+=======
+﻿<?php
+>>>>>>> 3d30da12decfc15b7bd4baa6ec57248fc501401a
     $keys = array('name','number', 'venue', 'diner', 'time');
     $csv_line = array();
     foreach($keys as $key){
@@ -11,5 +15,9 @@
     $fcontent = $csv_line;
     fwrite($fcon,$csv_line);
     fclose($fcon);
+<<<<<<< HEAD
 ?>
 
+=======
+?>
+>>>>>>> 3d30da12decfc15b7bd4baa6ec57248fc501401a

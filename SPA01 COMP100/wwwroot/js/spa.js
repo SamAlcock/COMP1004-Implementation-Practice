@@ -100,16 +100,11 @@ function validate() {
     }
 }
 
-$(document).ready(function () {
-    $('#customer-submit').click(function () {
-        var CustomersVenue = document.getElementById('InputVenueCustomer').value;
-        var Customers = document.getElementById('InputDiner').value;
-        var TimeAttending = document.getElementById('TimeAttending').value;
-        //var key = document.getElementById('key').value; //gets the key from the user
-        var key = 'key';
-        localStorage.setItem(key, CustomersVenue)
-        localStorage.setItem(key, Customers)
-        localStorage.setItem(key, TimeAttending)
-
-    })
-});
+//$(document).ready(function () {
+    //$('#customer-submit').click(function () {
+      //  var data = [];
+    //    $('p > label').each(function () {
+    //        arr.push($(this).html());
+     //   });
+    //})
+//});
