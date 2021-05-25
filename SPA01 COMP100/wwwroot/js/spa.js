@@ -47,14 +47,34 @@ $(document).ready(function () {
     })
 });
 $(document).ready(function () {
+    $('#track-and-trace_image').click(function () {
+        $('#page-content-wrapper').load('track-and-trace.html');
+    })
+});
+$(document).ready(function () {
     $(document).on("click", "#login-submit", function () {
         //$('#page-content-wrapper').load('venue.html');
         validate();
     })
 });
 $(document).ready(function () {
-    $('#yes').click(function () {
+    $(document).on("click", "#yes", function () {
         $('#page-content-wrapper').load('isolate.html');
+    })
+    $(document).on("click", "#no", function () {
+        $('#page-content-wrapper').load('unwell.html');
+    })
+    $(document).on("click", "#yes-2", function () {
+        $('#page-content-wrapper').load('isolate.html');
+    })
+    $(document).on("click", "#no-2", function () {
+        $('#page-content-wrapper').load('positive.html');
+    })
+    $(document).on("click", "#yes-3", function () {
+        $('#page-content-wrapper').load('finalisolate.html');
+    })
+    $(document).on("click", "#no-3", function () {
+        $('#page-content-wrapper').load('finalisolate.html');
     })
 });
 function store_customer_form() { //stores items in the localStorage
