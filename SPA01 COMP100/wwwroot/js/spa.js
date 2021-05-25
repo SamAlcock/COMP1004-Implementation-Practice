@@ -74,7 +74,7 @@ $(document).ready(function () {
         $('#page-content-wrapper').load('finalisolate.html');
     })
     $(document).on("click", "#no-3", function () {
-        $('#page-content-wrapper').load('finalisolate.html');
+        $('#page-content-wrapper').load('safe.html');
     })
 });
 function store_customer_form() { //stores items in the localStorage
